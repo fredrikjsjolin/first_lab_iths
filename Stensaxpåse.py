@@ -2,30 +2,22 @@ import random
 
 list = ["sten", "sax", "påse"]
 
-# while x != y:
-
 random_word = random.choice(list)
    
 my_choice = input("Sten, sax eller påse: ")
-    # int_number = int(number)
-    # print("Du skrev in talet", int_number)
 
-print(random_word)
+print("Datorns val: ", random_word)
 
 if my_choice == random_word:
-    print("oavgjort")
+    print("Oavgjort")
 
-elif random_word == "sten" and my_choice == "påse" or random_word == "sax" and my_choice == "sten":
+elif random_word == "sten" and my_choice == "påse" or random_word == "sax" and my_choice == "sten" or random_word == "påse" and my_choice == "sax":
     print("Du vann!")
 
-elif random_word == "sten" and my_choice == "sax" or random_word == "sax" and my_choice == "påse":
-    print("Du förlorade")
-
-# elif random_word == "sax" and my_choice == "påse":
-    # print("Du förlorade")
-
-# elif random_word == "sax" and my_choice == "sten":
-    # print("Du vann!")
+# elif random_word == "sten" and my_choice == "sax" or random_word == "sax" and my_choice == "påse" or random_word == "påse" and my_choice == "sten":
+    # print("Du förlorade..")
 
 else:
-    print("påse ej def...")
+    print("Du förlorade..")
+
+
