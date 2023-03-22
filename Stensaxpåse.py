@@ -6,18 +6,19 @@ random_word = random.choice(list)
    
 my_choice = input("Sten, sax eller påse: ")
 
-print("Datorns val: ", random_word)
+print("Datorns val:", random_word)
 
-if my_choice == random_word:
-    print("Oavgjort")
+while my_choice == random_word:
+    print("Oavgjort, försök igen")
 
-elif random_word == "sten" and my_choice == "påse" or random_word == "sax" and my_choice == "sten" or random_word == "påse" and my_choice == "sax":
-    print("Du vann!")
+    random_word = random.choice(list)
+   
+    my_choice = input("Sten, sax eller påse: ")
 
-# elif random_word == "sten" and my_choice == "sax" or random_word == "sax" and my_choice == "påse" or random_word == "påse" and my_choice == "sten":
-    # print("Du förlorade..")
+    print("Datorns val:", random_word)
+
+if random_word == "sten" and my_choice == "påse" or random_word == "sax" and my_choice == "sten" or random_word == "påse" and my_choice == "sax":
+        print("Du vann!")
 
 else:
-    print("Du förlorade..")
-
-
+        print("Du förlorade..")
